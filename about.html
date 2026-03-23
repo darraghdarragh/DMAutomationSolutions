@@ -1,92 +1,124 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | DM Web Solutions</title>
-  <link rel="stylesheet" href="styles/style.css">
+  <meta name="description" content="Learn more about DM Web Solutions and how we help businesses with AI automation, digital systems, and modern websites." />
+  <link rel="stylesheet" href="styles/style.css" />
   <script defer src="scripts/main.js"></script>
 </head>
 <body>
-  <!-- Preloader -->
   <div id="preloader"><div class="loader"></div></div>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="nav-row">
-      <a href="index.html" class="brand"><span class="logo-dot"></span> DM Web Solutions</a>
-      <nav class="nav">
+  <header class="site-header" id="header">
+    <div class="container nav-row">
+      <a href="index.html" class="brand">
+        <span class="logo-dot"></span>
+        <strong>DM Web Solutions</strong>
+      </a>
+
+      <nav class="nav" id="nav">
         <a href="index.html">Home</a>
         <a href="about.html" class="active">About</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="contact.html">Contact</a>
       </nav>
+
       <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle">🌙</button>
-        <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">◐</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- Hero -->
   <section class="about-hero subtle fade-in">
-    <h1>Who We Are</h1>
-    <p>We’re an Irish web design studio helping small businesses stand out online through clean design and reliable technology.</p>
+    <div class="container">
+      <span class="eyebrow">About DM Web Solutions</span>
+      <h1>Building smarter systems for modern businesses</h1>
+      <p>
+        We help Irish businesses grow through AI automation, smart workflows, and modern digital experiences.
+      </p>
+    </div>
   </section>
 
-  <!-- Story Section -->
   <section class="about-section fade-in">
     <div class="about-text">
-      <h2>Our Story</h2>
-      <p>DM Web Solutions was founded in Kildare by <strong>Darragh Morrissey</strong> with a simple goal: make professional, modern web design accessible to everyone. We work with cafés, tradespeople, small shops, and startups — anyone who needs a beautiful, functional online presence.</p>
-      <p>Our team combines technical expertise with creativity, delivering sleek, responsive websites that look great and perform flawlessly on every device.</p>
+      <span class="section-kicker">Our Story</span>
+      <h2>From websites to intelligent business systems</h2>
+      <p>
+        DM Web Solutions was founded by <strong>Darragh Morrissey</strong> to help businesses build a stronger digital presence.
+        What began as web design has evolved into a broader mission: creating smart systems that save time, reduce friction,
+        and support growth.
+      </p>
+      <p>
+        Today, our work spans AI agents, automation workflows, premium websites, and connected business systems that make
+        operations smoother and more scalable.
+      </p>
     </div>
-    <img src="images/team-working.jpg" alt="DM Web Solutions team at work">
+    <img src="images/web-solutions-team.png" alt="DM Web Solutions team working" />
   </section>
 
-  <!-- Mission Section -->
   <section class="about-section reverse fade-in">
-    <img src="images/office.jpg" alt="DM Web Solutions office workspace">
     <div class="about-text">
-      <h2>Our Mission</h2>
-      <p>To empower small Irish businesses with websites that not only look incredible but also help drive growth, engagement, and trust online. We focus on simplicity, usability, and strong visual storytelling — creating designs that truly reflect your brand.</p>
+      <span class="section-kicker">Our Mission</span>
+      <h2>Practical innovation that drives real value</h2>
+      <p>
+        Our mission is to help businesses work smarter, not harder — using AI, automation, and modern technology to
+        improve operations, customer experience, and long-term scalability.
+      </p>
+      <p>
+        We focus on clean execution, premium design, and solutions that are useful in the real world, not just impressive on paper.
+      </p>
     </div>
+    <img src="images/web-solutions.png" alt="Workspace and digital systems" />
   </section>
 
-  <!-- Meet the Team -->
   <section class="team-section fade-in">
-    <h2 class="section-title">Meet the Team</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="images/darragh.jpg" alt="Darragh Morrissey">
-        <h3>Darragh Morrissey</h3>
-        <p><strong>Founder & Lead Developer</strong></p>
-        <p>Darragh blends technical skill with creative direction — specialising in front-end design, SEO, and user experience to help small businesses thrive online.</p>
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-kicker">Leadership</span>
+        <h2 class="section-title">Meet the founder</h2>
       </div>
 
-      <div class="card">
-        <img src="images/lauren.jpg" alt="Lauren Byrne">
-        <h3>Lauren Byrne</h3>
-        <p><strong>UI/UX Designer</strong></p>
-        <p>Lauren crafts interfaces that are intuitive and elegant. Her focus on clarity and accessibility ensures every design feels effortless to use.</p>
+      <div class="founder-wrap">
+        <div class="card founder-card">
+          <img src="images/darragh1.jpg" alt="Darragh Morrissey" class="founder-photo" />
+
+          <div class="founder-content">
+            <h3>Darragh Morrissey</h3>
+            <p class="founder-role"><strong>Founder & AI Automation Solutions Developer</strong></p>
+            <p>
+              Darragh blends software engineering, AI, and automation expertise to build systems that help businesses
+              move faster, look better, and operate more efficiently.
+            </p>
+            <p>
+              With a focus on practical delivery, clean design, and scalable digital solutions, he works with clients
+              to turn ideas into modern systems that create real business value.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="cta subtle fade-in">
-    <div class="cta-row">
-      <h2>Ready to bring your business online with style?</h2>
+    <div class="container cta-row">
+      <div>
+        <span class="section-kicker">Work With Us</span>
+        <h2>Need a smarter setup for your business?</h2>
+        <p>Let’s design a system that improves how your business looks, works, and grows.</p>
+      </div>
       <a href="contact.html" class="btn">Let’s Talk</a>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="site-footer">
-    <p>© 2025 DM Web Solutions — Crafted with ❤️ in Ireland</p>
+    <p>© <span id="year"></span> DM Web Solutions — AI, Automation & Web Solutions in Ireland</p>
   </footer>
 
-  <!-- Floating Theme Toggle -->
-  <button class="floating-theme" id="floatingTheme">🌙</button>
+  <button class="floating-theme" id="floatingTheme" title="Toggle theme">◐</button>
 </body>
 </html>

@@ -1,89 +1,137 @@
-// === DM Web Solutions — main.js (fixed & clean) ===
+// === DM Web Solutions — main.js (refined) ===
 
-// Loader fade-out
 document.addEventListener("DOMContentLoaded", () => {
-  const loader = document.getElementById("preloader");
-  if (loader) {
+  const html = document.documentElement;
+  const preloader = document.getElementById("preloader");
+  const header = document.getElementById("header");
+  const nav = document.getElementById("nav");
+  const navToggle = document.getElementById("navToggle");
+  const themeToggle = document.getElementById("themeToggle");
+  const floatingTheme = document.getElementById("floatingTheme");
+  const yearEls = document.querySelectorAll("#year");
+  const animatedEls = document.querySelectorAll(".reveal, .fade-in");
+
+  // ==============================
+  // Preloader
+  // ==============================
+  if (preloader) {
     setTimeout(() => {
-      loader.classList.add("hide");
-      setTimeout(() => loader.remove(), 600);
-    }, 600);
+      preloader.classList.add("hide");
+      setTimeout(() => {
+        if (preloader.parentNode) preloader.remove();
+      }, 500);
+    }, 500);
   }
-});
 
-// Sticky header
-const header = document.getElementById("header");
-if (header) {
-  const handleScroll = () => header.classList.toggle("scrolled", window.scrollY > 10);
-  window.addEventListener("scroll", handleScroll);
+  // ==============================
+  // Sticky header shadow on scroll
+  // ==============================
+  const handleScroll = () => {
+    if (!header) return;
+    header.classList.toggle("scrolled", window.scrollY > 10);
+  };
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
   handleScroll();
-}
 
-// Mobile nav toggle
-const navToggle = document.getElementById("navToggle");
-const nav = document.getElementById("nav");
-if (navToggle && nav) {
-  navToggle.addEventListener("click", () => {
-    const open = nav.classList.toggle("open");
-    navToggle.setAttribute("aria-expanded", open);
-  });
-}
+  // ==============================
+  // Mobile nav toggle
+  // ==============================
+  if (navToggle && nav) {
+    navToggle.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+    });
 
-// === Theme toggle ===
-const themeToggle = document.getElementById("themeToggle");
-const themeIcon = document.getElementById("themeIcon");
-const floatingTheme = document.getElementById("floatingTheme");
+    // Close nav when clicking a link
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+      });
+    });
 
-function updateThemeIcon(theme) {
-  if (!themeIcon) return;
-  themeIcon.innerHTML =
-    theme === "dark"
-      ? '<path d="M21.64 13A9 9 0 1 1 11 2.36a7 7 0 1 0 10.64 10.64z"/>'
-      : '<path d="M12 3a9 9 0 1 0 9 9 9.013 9.013 0 0 0-9-9Zm0 16a7 7 0 1 1 7-7 7.008 7.008 0 0 1-7 7Z"/>';
-}
+    // Close nav when clicking outside
+    document.addEventListener("click", (e) => {
+      const clickedInsideNav = nav.contains(e.target);
+      const clickedToggle = navToggle.contains(e.target);
 
-function toggleTheme() {
-  const current =
-    document.documentElement.getAttribute("data-theme") === "dark"
-      ? "light"
-      : "dark";
-  document.documentElement.setAttribute("data-theme", current);
-  localStorage.setItem("theme", current);
-  updateThemeIcon(current);
-}
+      if (!clickedInsideNav && !clickedToggle && nav.classList.contains("open")) {
+        nav.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
 
-// Load saved theme
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme) {
-  document.documentElement.setAttribute("data-theme", savedTheme);
-  updateThemeIcon(savedTheme);
-} else {
-  updateThemeIcon("light");
-}
+  // ==============================
+  // Theme toggle
+  // ==============================
+  const setThemeButtonLabel = (theme) => {
+    const label = theme === "dark" ? "☀️" : "🌙";
 
-themeToggle?.addEventListener("click", toggleTheme);
-floatingTheme?.addEventListener("click", toggleTheme);
+    if (themeToggle) {
+      themeToggle.innerHTML = `<span>${label}</span>`;
+      themeToggle.setAttribute("aria-label", `Switch to ${theme === "dark" ? "light" : "dark"} mode`);
+      themeToggle.setAttribute("title", `Switch to ${theme === "dark" ? "light" : "dark"} mode`);
+    }
 
-// Reveal animation
-const io = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((e) => e.isIntersecting && e.target.classList.add("in"));
-  },
-  { threshold: 0.1 }
-);
-document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    if (floatingTheme) {
+      floatingTheme.textContent = label;
+      floatingTheme.setAttribute("aria-label", `Switch to ${theme === "dark" ? "light" : "dark"} mode`);
+      floatingTheme.setAttribute("title", `Switch to ${theme === "dark" ? "light" : "dark"} mode`);
+    }
+  };
 
-// Dynamic year
-const yearSpan = document.getElementById("year");
-if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+  const applyTheme = (theme) => {
+    html.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+    setThemeButtonLabel(theme);
+  };
 
-console.log("✅ main.js loaded successfully");
+  const savedTheme = localStorage.getItem("theme");
+  const initialTheme = savedTheme || "light";
+  applyTheme(initialTheme);
 
-// Fade-in scroll animation
-const fadeElements = document.querySelectorAll('.fade-in');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('visible');
-  });
+  const toggleTheme = () => {
+    const currentTheme = html.getAttribute("data-theme") === "dark" ? "dark" : "light";
+    applyTheme(currentTheme === "dark" ? "light" : "dark");
+  };
+
+  themeToggle?.addEventListener("click", toggleTheme);
+  floatingTheme?.addEventListener("click", toggleTheme);
+
+  // ==============================
+  // Reveal / Fade-in animations
+  // ==============================
+  if (animatedEls.length > 0) {
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          entry.target.classList.add("in");
+          entry.target.classList.add("visible");
+          obs.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -40px 0px"
+      }
+    );
+
+    animatedEls.forEach((el) => observer.observe(el));
+  }
+
+  // ==============================
+  // Dynamic year
+  // ==============================
+  if (yearEls.length > 0) {
+    const year = new Date().getFullYear();
+    yearEls.forEach((el) => {
+      el.textContent = year;
+    });
+  }
+
+  console.log("✅ main.js loaded successfully");
 });
-fadeElements.forEach(el => observer.observe(el));

@@ -1,98 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | DM Web Solutions</title>
+  <meta name="description" content="Get in touch with DM Web Solutions to discuss AI automation systems, smart workflows, websites, and custom digital solutions." />
   <link rel="stylesheet" href="styles/style.css" />
+  <script defer src="scripts/main.js"></script>
 </head>
 <body>
   <div id="preloader"><div class="loader"></div></div>
 
   <header class="site-header" id="header">
     <div class="container nav-row">
-      <a class="brand" href="index.html"><span class="logo-dot"></span><strong>DM Web Solutions</strong></a>
+      <a class="brand" href="index.html">
+        <span class="logo-dot"></span>
+        <strong>DM Web Solutions</strong>
+      </a>
+
       <nav class="nav" id="nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="contact.html" class="active">Contact</a>
       </nav>
+
       <div class="nav-actions">
-        <button id="themeToggle" class="theme-toggle" title="Toggle theme">
-          <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"></svg>
+        <button id="themeToggle" class="theme-toggle" title="Toggle theme" aria-label="Toggle theme">◐</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
         </button>
-        <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Let’s Build Something Great Together</h1>
-    <p class="lead">Fill out the form below or email us directly — we reply within 24 hours.</p>
+  <section class="hero hero-compact">
+    <div class="container">
+      <span class="eyebrow">Start a Conversation</span>
+      <h1>Let’s automate and improve your business</h1>
+      <p class="lead">
+        Looking to automate your business, build AI-powered systems, or modernise your digital presence? Let’s talk.
+      </p>
+    </div>
   </section>
 
-  <!-- Contact Form -->
   <section class="section reveal">
-    <form class="contact-form" action="https://formspree.io/f/mwprjnge" method="POST">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" placeholder="Your full name" required>
+    <div class="contact-layout">
+      <form class="contact-form" action="https://formspree.io/f/mwprjnge" method="POST">
+        <h2>Tell us about your project</h2>
 
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required />
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="6" placeholder="Tell us about your project..." required></textarea>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
 
-      <button type="submit" class="btn" style="margin-top:1.5rem;">Send Message</button>
-    </form>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Tell us what you want to automate, improve, or build..." required></textarea>
 
-    <!-- Contact Info Section -->
-    <div class="contact-info reveal">
-      <h2>Get in Touch Directly</h2>
-      <div class="info-row">
-        <div class="info-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 2v.51L12 13 4 6.51V6h16ZM4 18v-9.28l7.38 6.31a1 1 0 0 0 1.24 0L20 8.72V18H4Z"/>
-          </svg>
-          <a href="mailto:dmwebsolutions@outlook.com">dmwebsolutions@outlook.com</a>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+      <div class="contact-side">
+        <div class="contact-info">
+          <h2>Get in touch directly</h2>
+
+          <div class="info-row">
+            <div class="info-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 2v.51L12 13 4 6.51V6h16ZM4 18v-9.28l7.38 6.31a1 1 0 0 0 1.24 0L20 8.72V18H4Z"/>
+              </svg>
+              <a href="mailto:dmwebsolutions@outlook.com">dmwebsolutions@outlook.com</a>
+            </div>
+
+            <div class="info-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M6.62 10.79a15.91 15.91 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1-.24 11.36 11.36 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.58 1 1 0 0 1-.24 1Z"/>
+              </svg>
+              <span><strong>087 362 7735</strong></span>
+            </div>
+          </div>
         </div>
 
-        <div class="info-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M6.62 10.79a15.91 15.91 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1-.24 11.36 11.36 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.58 1 1 0 0 1-.24 1Z"/>
-          </svg>
-          <span><strong>087 362 7735</strong></span>
+        <div class="mini-card">
+          <span class="section-kicker">Typical Enquiries</span>
+          <ul class="clean-list">
+            <li>AI automation systems</li>
+            <li>Business workflow automation</li>
+            <li>Document generation solutions</li>
+            <li>AI-powered web solutions</li>
+            <li>Digital process improvements</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ Section -->
   <section class="section subtle reveal">
-    <h2 class="section-title">Quick Answers</h2>
+    <div class="section-heading">
+      <span class="section-kicker">Quick Answers</span>
+      <h2 class="section-title">FAQs</h2>
+    </div>
+
     <div class="cards">
       <div class="card">
-        <h3>Do you work with small budgets?</h3>
-        <p>Absolutely — we specialise in affordable sites for startups and sole traders.</p>
+        <h3>Do you build AI and automation systems?</h3>
+        <p>Yes — we specialise in AI-powered workflows, business process automation, and practical digital systems.</p>
       </div>
       <div class="card">
-        <h3>Can you manage our domain and hosting?</h3>
-        <p>Yes, we’ll handle everything — from purchase to setup and maintenance.</p>
+        <h3>Can you still build websites?</h3>
+        <p>Absolutely. We build premium websites and can integrate them with forms, automation, and wider business systems.</p>
       </div>
       <div class="card">
-        <h3>Do you offer redesigns of existing sites?</h3>
-        <p>We can modernise your current site to match today’s performance and design standards.</p>
+        <h3>Do you work with small businesses?</h3>
+        <p>Yes — we help small and growing businesses modernise how they look, work, and scale.</p>
       </div>
     </div>
   </section>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> DM Web Solutions — Let’s Create Something Beautiful ✨</p>
+    <p>© <span id="year"></span> DM Web Solutions — AI, Automation & Web Solutions in Ireland</p>
   </footer>
 
-  <button id="floatingTheme" class="floating-theme" title="Toggle theme">🌙</button>
-  <script src="scripts/main.js"></script>
+  <button id="floatingTheme" class="floating-theme" title="Toggle theme">◐</button>
 </body>
 </html>

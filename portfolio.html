@@ -1,95 +1,127 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | DM Web Solutions</title>
-  <link rel="stylesheet" href="styles/style.css">
+  <meta name="description" content="Explore selected work from DM Web Solutions including AI automation systems, workflow solutions, and premium business websites." />
+  <link rel="stylesheet" href="styles/style.css" />
   <script defer src="scripts/main.js"></script>
 </head>
 <body>
-  <!-- Preloader -->
   <div id="preloader"><div class="loader"></div></div>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="nav-row">
-      <a href="index.html" class="brand"><span class="logo-dot"></span> DM Web Solutions</a>
-      <nav class="nav">
+  <header class="site-header" id="header">
+    <div class="container nav-row">
+      <a href="index.html" class="brand">
+        <span class="logo-dot"></span>
+        <strong>DM Web Solutions</strong>
+      </a>
+
+      <nav class="nav" id="nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="portfolio.html" class="active">Portfolio</a>
         <a href="contact.html">Contact</a>
       </nav>
+
       <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle">🌙</button>
-        <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">◐</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- Hero -->
   <section class="about-hero subtle fade-in">
-    <h1>Our Work</h1>
-    <p>We partner with local Irish businesses to design, build, and launch modern websites that perform beautifully on every device.</p>
+    <div class="container">
+      <span class="eyebrow">Selected Projects</span>
+      <h1>Work built for efficiency, growth, and modern delivery</h1>
+      <p>
+        We build AI-powered systems, automation workflows, and premium digital solutions that help businesses operate smarter.
+      </p>
+    </div>
   </section>
 
-  <!-- Projects -->
   <section class="section fade-in">
-    <h2 class="section-title">Recent Projects</h2>
+    <div class="section-heading">
+      <span class="section-kicker">Featured Work</span>
+      <h2 class="section-title">Recent projects</h2>
+    </div>
+
     <div class="cards portfolio-grid">
       <div class="card project-card">
-        <img src="images/cafe-site.jpg" alt="Café Bloom website">
-        <h3>Café Bloom</h3>
-        <p>A bright, minimalist site for a family-run café in Kildare. Includes an interactive menu and booking system.</p>
-        <a href="#" class="btn-ghost">View Project</a>
+        <img src="images/ai-automation.jpg" alt="AI automation system" />
+        <h3>AI Client Automation System</h3>
+        <p>
+          A custom AI and automation workflow designed to generate outputs, streamline business processes, and reduce manual admin.
+        </p>
+        <a href="contact.html" class="btn-ghost">Request Similar Project</a>
       </div>
 
       <div class="card project-card">
-        <img src="images/tradesman-site.jpg" alt="Kildare Plumbing & Heating">
-        <h3>Kildare Plumbing & Heating</h3>
-        <p>Built for speed and reliability — features service listings, client reviews, and a same-day callout form.</p>
-        <a href="#" class="btn-ghost">View Project</a>
+        <img src="images/cafe-site.jpg" alt="Café business website" />
+        <h3>Premium Business Website</h3>
+        <p>
+          A modern website built to strengthen trust, improve mobile performance, and support better lead generation.
+        </p>
+        <a href="contact.html" class="btn-ghost">View Approach</a>
       </div>
 
       <div class="card project-card">
-        <img src="images/salon-site.jpg" alt="Luxe Hair Studio">
-        <h3>Luxe Hair Studio</h3>
-        <p>A modern, elegant website for a local salon with online booking integration and gallery showcase.</p>
-        <a href="#" class="btn-ghost">View Project</a>
+        <img src="images/tradesman-site.jpg" alt="Trades business website" />
+        <h3>Service Business Lead System</h3>
+        <p>
+          A clean digital setup for a service business, focused on clarity, enquiry flow, and a more efficient customer journey.
+        </p>
+        <a href="contact.html" class="btn-ghost">View Approach</a>
       </div>
 
-  </section>
-
-  <!-- Testimonials -->
-  <section class="section fade-in subtle">
-    <h2 class="section-title">Client Feedback</h2>
-    <div class="cards testimonials">
-      <div class="card">
-        <p>“Exactly what we needed — fast turnaround, great communication, and a site that works.”</p>
-        <strong>— Mark, The Fitness Garage</strong>
-      </div>
-      <div class="card">
-        <p>“The perfect blend of creativity and professionalism. Highly recommend!”</p>
-        <strong>— Sarah, Luxe Hair Studio</strong>
+      <div class="card project-card">
+        <img src="images/salon-site.jpg" alt="Salon website design" />
+        <h3>Brand-Led Booking Website</h3>
+        <p>
+          A premium service website designed for stronger visual presentation, smoother enquiries, and future booking integration.
+        </p>
+        <a href="contact.html" class="btn-ghost">View Approach</a>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
+  <section class="section fade-in subtle">
+    <div class="section-heading">
+      <span class="section-kicker">Client Value</span>
+      <h2 class="section-title">What these solutions improve</h2>
+    </div>
+
+    <div class="cards testimonials">
+      <div class="card">
+        <p>“Exactly what we needed — a smarter setup, stronger presentation, and a solution that genuinely improved how we work.”</p>
+        <strong>— Business Owner, Kildare</strong>
+      </div>
+      <div class="card">
+        <p>“The final result felt thought through from both a design and systems perspective. It looked premium and worked properly.”</p>
+        <strong>— Local Service Brand</strong>
+      </div>
+    </div>
+  </section>
+
   <section class="cta fade-in">
-    <div class="cta-row">
-      <h2>Want your business featured here next?</h2>
+    <div class="container cta-row">
+      <div>
+        <span class="section-kicker">Your Next Project</span>
+        <h2>Need a system that works smarter?</h2>
+        <p>Let’s build something modern, useful, and aligned with how your business actually operates.</p>
+      </div>
       <a href="contact.html" class="btn">Let’s Talk</a>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="site-footer">
-    <p>© 2025 DM Web Solutions — Crafted with ❤️ in Ireland</p>
+    <p>© <span id="year"></span> DM Web Solutions — AI, Automation & Web Solutions in Ireland</p>
   </footer>
 
-  <!-- Floating Theme Button -->
-  <button class="floating-theme" id="floatingTheme">🌙</button>
+  <button class="floating-theme" id="floatingTheme" title="Toggle theme">◐</button>
 </body>
 </html>

@@ -1,116 +1,208 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> 
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DM Web Solutions | Modern Irish Web Design</title>
+  <title>DM Web Solutions | AI & Automation Systems for Irish Businesses</title>
+  <meta name="description" content="DM Web Solutions helps Irish businesses save time and grow faster with AI automation systems, smart workflows, and modern websites." />
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="icon" href="images/favicon.png" />
-  <meta name="description" content="DM Web Solutions builds modern, minimalist websites for Irish businesses. Clean design, fast performance, and personal service.">
+  <script defer src="scripts/main.js"></script>
 </head>
 <body>
   <div id="preloader"><div class="loader"></div></div>
 
-  <!-- Header -->
   <header class="site-header" id="header">
     <div class="container nav-row">
-      <a class="brand" href="index.html"><span class="logo-dot"></span><strong>DM Web Solutions</strong></a>
+      <a class="brand" href="index.html">
+        <span class="logo-dot"></span>
+        <strong>DM Web Solutions</strong>
+      </a>
+
       <nav class="nav" id="nav">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="contact.html">Contact</a>
       </nav>
+
       <div class="nav-actions">
-        <button id="themeToggle" class="theme-toggle" title="Toggle theme">
-          <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"></svg>
+        <button id="themeToggle" class="theme-toggle" title="Toggle theme" aria-label="Toggle theme">
+          <span>◐</span>
         </button>
-        <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>Modern, Minimalist Websites for Irish Businesses</h1>
-    <p class="lead">We craft clean, fast, mobile-friendly websites that help your business grow — without the agency price tag.</p>
-    <div class="hero-actions">
-      <a href="portfolio.html" class="btn">See Our Work</a>
-      <a href="contact.html" class="btn-ghost">Get a Free Quote</a>
+  <!-- HERO -->
+  <section class="hero hero-home">
+    <div class="hero-grid container">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">AI • Automation • Systems</span>
+
+        <h1>AI automation systems that save time and scale your business</h1>
+
+        <p class="lead">
+          We design and build AI agents, workflow automation, and modern digital systems
+          that reduce manual work, improve efficiency, and help your business grow faster.
+        </p>
+
+        <div class="hero-actions">
+          <a href="contact.html" class="btn">Book a Free Call</a>
+          <a href="portfolio.html" class="btn-ghost">See Our Work</a>
+        </div>
+
+        <div class="hero-trust">
+          <div class="trust-item">
+            <strong>Save time</strong>
+            <span>Automate repetitive tasks and reduce manual work</span>
+          </div>
+          <div class="trust-item">
+            <strong>Work smarter</strong>
+            <span>AI-powered systems that improve how your business runs</span>
+          </div>
+          <div class="trust-item">
+            <strong>Grow faster</strong>
+            <span>Better processes, faster delivery, stronger results</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-panel reveal">
+        <div class="glass-card">
+          <div class="panel-top">
+            <span class="status-dot"></span>
+            <span>Automation Pipeline</span>
+          </div>
+
+          <div class="pipeline-step">
+            <span>Client request received</span>
+            <strong>AI intake</strong>
+          </div>
+          <div class="pipeline-step">
+            <span>Data processed</span>
+            <strong>Workflow automation</strong>
+          </div>
+          <div class="pipeline-step">
+            <span>Documents generated</span>
+            <strong>Output delivered</strong>
+          </div>
+          <div class="pipeline-step">
+            <span>Customer updated</span>
+            <strong>Instant follow-up</strong>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Services -->
+  <!-- SERVICES -->
   <section class="section reveal">
-    <h2 class="section-title">Why Choose DM Web Solutions?</h2>
+    <div class="section-heading">
+      <span class="section-kicker">Services</span>
+      <h2 class="section-title">Systems that improve how your business operates</h2>
+      <p class="section-intro">
+        We build practical solutions that reduce admin, improve workflows, and create real business value.
+      </p>
+    </div>
+
     <div class="cards">
-      <div class="card">
-        <h3>🚀 Speed & Performance</h3>
-        <p>Our sites load in under two seconds, optimised for Google Core Web Vitals to keep your visitors engaged and converting.</p>
+      <div class="card feature-card">
+        <div class="icon-badge">🤖</div>
+        <h3>AI Automation Systems</h3>
+        <p>
+          Custom AI-driven workflows that handle tasks, generate outputs, and support your business operations automatically.
+        </p>
       </div>
-      <div class="card">
-        <h3>📱 Mobile First</h3>
-        <p>Every design adapts perfectly to phones, tablets, and desktops. 80% of your visitors browse on mobile — we design with that in mind.</p>
+
+      <div class="card feature-card">
+        <div class="icon-badge">⚙️</div>
+        <h3>Workflow Automation</h3>
+        <p>
+          Automate data collection, document generation, approvals, and internal processes to reduce admin and improve speed.
+        </p>
       </div>
-      <div class="card">
-        <h3>💡 Brand Identity</h3>
-        <p>We blend sleek visuals with your story to create a website that’s memorable and truly yours.</p>
+
+      <div class="card feature-card">
+        <div class="icon-badge">🌐</div>
+        <h3>AI-Powered Web Systems</h3>
+        <p>
+          Modern websites integrated with forms, automation, and systems that support real business growth.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials -->
+  <!-- WHY -->
   <section class="section subtle reveal">
-    <h2 class="section-title">What Our Clients Say</h2>
+    <div class="section-heading">
+      <span class="section-kicker">Why DM Web Solutions</span>
+      <h2 class="section-title">Built for real results, not just design</h2>
+    </div>
+
     <div class="cards">
       <div class="card">
-        <p>“DM Web Solutions transformed our café’s online presence. Bookings are up 40% since the new site went live.”</p>
-        <strong>— Anna, The Green Bean Café, Naas</strong>
+        <h3>Less admin</h3>
+        <p>Remove repetitive tasks and free up time to focus on what actually matters.</p>
       </div>
       <div class="card">
-        <p>“Our construction site now looks professional and attracts consistent enquiries. Darragh was patient, creative, and quick.”</p>
-        <strong>— Declan, Kildare Building Co.</strong>
+        <h3>Better systems</h3>
+        <p>Improve how your business runs with smarter workflows and automation.</p>
       </div>
       <div class="card">
-        <p>“From first call to launch day, everything was simple. The website looks better than we imagined!”</p>
-        <strong>— Claire, Boutique Retailer Dublin</strong>
+        <h3>Scalable setup</h3>
+        <p>Build systems that grow with your business instead of slowing it down.</p>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- WORK -->
   <section class="section reveal">
-    <h2 class="section-title">Frequently Asked Questions</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>💭 How long does a website take?</h3>
-        <p>Most projects take 2–4 weeks depending on the number of pages and features.</p>
+    <div class="section-heading">
+      <span class="section-kicker">Selected Work</span>
+      <h2 class="section-title">Recent projects</h2>
+    </div>
+
+    <div class="cards portfolio-preview">
+      <div class="card project-card">
+        <img src="images/ai-automation.jpg" alt="AI automation system dashboard" />
+        <h3>AI Client Automation System</h3>
+        <p>
+          AI-powered workflow that automates outputs, reduces admin, and improves delivery efficiency.
+        </p>
       </div>
-      <div class="card">
-        <h3>💶 How much does it cost?</h3>
-        <p>Our pricing starts from €499 for a full website with hosting and SSL. Custom quotes are always free.</p>
-      </div>
-      <div class="card">
-        <h3>🔧 Do you offer updates after launch?</h3>
-        <p>Yes — we provide ongoing maintenance and support plans to keep your site fast and secure.</p>
+
+      <div class="card project-card">
+        <img src="images/cafe-site.jpg" alt="Modern website design" />
+        <h3>Premium Business Website</h3>
+        <p>
+          High-converting site built for credibility, performance, and strong lead generation.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="cta reveal">
-    <div class="cta-row container">
-      <h2>Ready to elevate your business online?</h2>
-      <a href="contact.html" class="btn">Request a Quote</a>
+    <div class="container cta-row">
+      <div>
+        <span class="section-kicker">Next Step</span>
+        <h2>Let’s build a smarter system for your business</h2>
+        <p>
+          If you're ready to reduce manual work and improve how your business runs, let’s talk.
+        </p>
+      </div>
+      <a href="contact.html" class="btn">Book a Free Call</a>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="site-footer">
-    <p>© <span id="year"></span> DM Web Solutions — Crafted with ❤️ in Ireland</p>
+    <p>© <span id="year"></span> DM Web Solutions — AI, Automation & Web Solutions in Ireland</p>
   </footer>
 
-  <button id="floatingTheme" class="floating-theme" title="Toggle theme">🌙</button>
-  <script src="scripts/main.js"></script>
+  <button id="floatingTheme" class="floating-theme" title="Toggle theme">◐</button>
 </body>
 </html>

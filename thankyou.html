@@ -1,46 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You | DM Web Solutions</title>
+  <meta name="description" content="Thank you for contacting DM Web Solutions. We’ll be in touch shortly about your AI, automation, or digital solutions project." />
   <link rel="stylesheet" href="styles/style.css" />
+  <script defer src="scripts/main.js"></script>
 </head>
 <body>
   <div id="preloader"><div class="loader"></div></div>
 
   <header class="site-header" id="header">
     <div class="container nav-row">
-      <a class="brand" href="index.html"><span class="logo-dot"></span><strong>DM Web Solutions</strong></a>
+      <a class="brand" href="index.html">
+        <span class="logo-dot"></span>
+        <strong>DM Web Solutions</strong>
+      </a>
+
       <nav class="nav" id="nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="contact.html">Contact</a>
       </nav>
+
       <div class="nav-actions">
-        <button id="themeToggle" class="theme-toggle" title="Toggle theme">
-          <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"></svg>
+        <button id="themeToggle" class="theme-toggle" title="Toggle theme" aria-label="Toggle theme">◐</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
         </button>
-        <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
 
-  <section class="hero">
-    <h1>Thank You!</h1>
-    <p class="lead">Your message has been received. We’ll get back to you soon.</p>
-    <div class="hero-actions">
-      <a href="index.html" class="btn">Back to Home</a>
-      <a href="portfolio.html" class="btn-ghost">View Our Work</a>
+  <section class="hero hero-compact">
+    <div class="container">
+      <span class="eyebrow">Message Received</span>
+      <h1>Thank you</h1>
+      <p class="lead">
+        Thanks for reaching out. We’ll review your enquiry and get back to you shortly.
+      </p>
+
+      <div class="hero-actions">
+        <a href="index.html" class="btn">Back to Home</a>
+        <a href="portfolio.html" class="btn-ghost">View Our Work</a>
+      </div>
     </div>
   </section>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> DM Web Solutions — Thank You for Reaching Out!</p>
+    <p>© <span id="year"></span> DM Web Solutions — AI, Automation & Web Solutions in Ireland</p>
   </footer>
 
-  <button id="floatingTheme" class="floating-theme" title="Toggle theme">🌙</button>
-  <script src="scripts/main.js"></script>
+  <button id="floatingTheme" class="floating-theme" title="Toggle theme">◐</button>
 </body>
 </html>
